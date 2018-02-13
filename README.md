@@ -5,6 +5,6 @@ Angular Table
 
 How to use: 
 
-  Extract the zip file.
-  Copy folder and paste in this path: “C:\Users\Admin\Documents\Qlik\Sense\Extensions”.
+  Extract the zip file.<br>
+  Copy folder and paste in this path: “C:\Users\Admin\Documents\Qlik\Sense\Extensions”.<br>
   You can use this extension in Qlik Sense Custome Object.
