@@ -1,0 +1,79 @@
+<div qv-extension style="height: 100%; position: relative; overflow: auto;">
+	<table border="1">
+		<thead>
+			<header>
+				<th colspan="8">
+					<h3 style="font-family: 'Times New Roman', Times, serif; font-size: 3em; font-weight:200 ">{{title}}</h3>
+				</th>
+			</header>
+			
+			<tr class="header-parent">
+				<th></th>
+				<th colspan="2">Addess</th>
+				<th colspan="3">Sales</th>
+				<th rowspan="2">{{table.headers[1].qFallbackTitle}}</th>
+				<th rowspan="2">Chart</th>
+			</tr>
+			<tr class="header-child">
+				<!-- <th ng-repeat="head in table.headers track by $index" qva-activate="head.orderBy()">{{head.qFallbackTitle}}</th> -->
+				<th>#</th>
+				<th>{{table.headers[0].qFallbackTitle}}</th>
+				<th>{{table.headers[2].qFallbackTitle}}</th>
+				<th>{{table.headers[3].qFallbackTitle}}</th>
+				<th>{{table.headers[4].qFallbackTitle}}</th>
+				<th>{{table.headers[5].qFallbackTitle}}</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in table.rows track by $index">
+				<center>
+					<td class="text-center">{{$index+1}}</td>
+					<td class="text-center">{{row.cells[0].qText}}</td>
+
+					<td class="text-center">{{row.cells[2].qText}}</td>
+
+					<td class="text-center">{{row.cells[3].qText}} $</td>
+
+					<td class="text-center">{{row.cells[4].qText}} $</td>
+
+					<td class="text-center" ng-class="row.cells[5].qText < 10000? 'font-color-indigo' : 'font-color-green'">{{row.cells[5].qText}}</td>
+			
+					<td class="text-center">
+						<img class="table-image" src="{{row.cells[1].qText}}">
+					</td>
+					<td style="width: 300px">
+						<div class="chart">
+							<!-- <div style="width: 40px;">4</div>
+							<div style="width: 80px;">8</div>
+							<div style="width: 150px;">15</div>
+							<div style="width: 160px;">16</div>
+							<div style="width: 230px;">23</div>
+							<div style="width: 420px;">42</div> -->
+							<div class="tooltip"><div style="width: {{row.cells[4].qText/1000}}px;">
+								<span class="tooltiptext">profit: {{row.cells[4].qText}}</span>
+							  </div></div>{{row.cells[4].qText}}
+						  </div>
+					</td>
+					<!-- <td ng-repeat="cell in row.cells track by $index" class="selectable" ng-class="{'selected':cell.selected,'numeric':cell.qNum}" qva-activate="cell.select($event)"><center>{{cell.qText}}</center></td> -->
+					<!-- <td ng-repeat="cell in row[1].cells track by $index" class="selectable" ng-class="{'selected':cell.selected,'numeric':cell.qNum}" qva-activate="cell.select($event)"><center>abc</center></td> -->
+			</tr>
+		</tbody>
+		<footer>
+			<tr class="footer">
+				<th>Total</th>
+				<th></th>
+				<th></th>
+				<th>{{layout.qHyperCube.qGrandTotalRow[0].qText}} $</th>
+				<th>{{layout.qHyperCube.qGrandTotalRow[1].qText}} $</th>
+				<th>{{layout.qHyperCube.qGrandTotalRow[2].qText}} </th>
+				<th></th>
+				
+				<th></th>
+			</tr>
+		</footer>
+	</table>
+	<!-- <button ng-if="table.rowCount>table.rows.length" qva-activate="table.getMoreData()" class="lui-button more">More...</button> -->
+
+	<!-- <img src="{{img}}"> -->
+</div>

@@ -1,0 +1,97 @@
+.qv-object-table_demo_angular div.qv-object-content-container {
+	overflow: auto;
+}
+
+.qv-object-table_demo_angular td,
+.qv-object-table_demo_angular th {
+	/* border-top: 0px solid #fff;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd; */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	cursor: default;
+	font-size: 12px;
+}
+
+.qv-object-table_demo_angular td.numeric {
+	text-align: right;
+}
+
+.qv-object-table_demo_angular button {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.font-color-red {
+	color: red;
+}
+
+.font-color-green {
+	color: green;
+}
+
+.font-color-indigo {
+	color: rgb(0, 13, 130);
+}
+
+.font-color-khaki {
+	color: khaki;
+}
+.table-image {
+	margin-top: 5px;
+	width: 50px;
+	height: 50px;
+}
+.header-parent {
+	height: 30px;
+}
+.header-child {
+	height: 25px;
+}
+.footer {
+	height: 25px;
+}
+tbody tr:nth-child(even) {
+	background-color:white;
+}
+tbody tr:nth-child(odd) {
+	background-color: #DAE4F0;
+}
+.chart div {
+	font: 10px sans-serif;
+	background-color: steelblue;
+	text-align: right;
+	padding: 3px;
+	margin: 1px;
+	color: white;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(190, 162, 162);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
